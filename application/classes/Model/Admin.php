@@ -20,7 +20,7 @@ class Model_Admin extends Kohana_Model
 
 	public function getCategory($cid = null, $id = null, $get = [])
 	{
-        if (!empty(Arr::get($_GET, 'name'))) {
+        if (!empty(Arr::get($get, 'name'))) {
             return [];
         }
 
