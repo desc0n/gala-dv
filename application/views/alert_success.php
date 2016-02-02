@@ -1,0 +1,1 @@
+<div class="alert alert-success" style="margin:10px;"><button type="button" class="close" data-dismiss="alert" onclick="javascript: document.location='http://<?=$_SERVER['SERVER_NAME'];?><?if(preg_match("/profile/i",$_SERVER['REQUEST_URI'])){?>/profile/info<?}?>';">&times;</button><strong><?=$zag?></strong> <?=$mess?></div>

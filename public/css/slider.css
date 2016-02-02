@@ -1,0 +1,117 @@
+html,
+body {
+	background-color: #000;
+    height: 100%;
+  	margin-bottom: 0;
+}
+.carousel-slider,
+.item-slider,
+.active-slider {
+    height: 95%;
+}
+
+.carousel-inner-slider {
+    height: 100%;
+}
+.fill {
+    width: 100%;
+    margin-top: 5%;
+    height: 90%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.carousel-caption{
+	height: 200px;
+	left: 0;
+	right: 0;
+	top: 40%;
+	background: rgba(255,255,255,0.6);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+	padding: 10px;
+}
+.carousel-control {
+	height: 200px;
+    position: absolute;
+	top: 40%;
+    bottom: 0;
+    left: 0;
+    width: 15%;
+    font-size: 20px;
+    z-index: 20;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+    filter: alpha(opacity=50);
+    opacity: 1;
+}
+.carousel-control >span{
+	font-size: 30px;
+	margin-top: 80px;
+	display: inline-block;
+}
+.carousel-control.left:hover,.carousel-control.right:hover{
+	background: rgba(185,89,83,0.9);
+	border-bottom: 3px;
+}
+.carousel-control.left:hover > span,.carousel-control.right:hover > span{
+	border-bottom: 3px solid #fff;
+}
+.carousel-control.left,.carousel-control.right {
+    background-repeat: repeat-x;
+	background: rgba(0,0,0,0.7);
+	text-align: left;
+}
+.carousel-control.left > span{
+	padding-left: 25%;
+}
+.carousel-control.right > span{
+    padding-right: 35%;
+}
+.carousel-control.right {
+    right: 0;
+    left: auto;
+    text-align: right;
+}
+@media (max-width: 1200px) {
+    .carousel-control.right > span {
+        padding-right: 35%;
+    }
+    .carousel-control > span{
+        font-size: 30px;
+    }
+}
+@media (max-width: 992px) {
+    .carousel-control.right > span {
+        padding-right: 340%;
+    }
+    .carousel-control >span{
+        font-size: 24px;
+    }
+}
+@media (max-width: 768px) {
+    .carousel-control.right > span {
+        padding-right: 45%;
+    }
+    .carousel-control >span{
+        font-size: 18px;
+    }
+}
+@media (max-width: 560px) {
+    .carousel-control.right > span {
+        padding-right: 35%;
+    }
+    .carousel-control >span{
+        font-size: 14px;
+    }
+    .carousel-control {
+        width: 25%;
+    }
+}
+
+
+.carousel-indicators{
+	font-size: 30px;
+}

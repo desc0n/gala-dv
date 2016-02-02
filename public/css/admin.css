@@ -1,0 +1,80 @@
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-login{
+    padding: 0 5px;
+}
+.form-login .form-control{
+    margin: 5px 0;
+}
+.form-login button,
+.admin-menu .btn{
+    width: 100%;
+}
+.admin-menu .row{
+    margin: 5px 0;
+}
+.admin-main-page-link{
+    text-align: left;
+}
+
+.redact-form .imgs-form button {
+    margin-left:10px;
+    padding:30px;
+}
+.redact-form .imgs-form .img-link {
+    margin-left:10px;
+}
+.imgs-form .glyphicon {
+    cursor: pointer;
+}
+.img-link .glyphicon {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: #111;
+    text-shadow: 1px 1px 1px #fff;
+    cursor: pointer;
+}
+.img-link {
+    width:300px;
+    position: relative;
+    margin: 10px 0;
+}
+.img-link img{
+    width:300px;
+}
+.redact-form .imgs-form img {
+    min-height: 70px;
+}
+
+.add-category .input-group {
+    padding-left: 15px;
+}
+
+.add-category .glyphicon,
+#accordion .glyphicon {
+    cursor: pointer;
+}
+
+.order-select {
+    width: 70px;
+}
+a.glyphicon:hover {
+    text-decoration: none;
+}
