@@ -36,7 +36,7 @@
             </div>
             <div class="index-nav ">
                 <div class="col-md-4 col-sm-12 col-xs-12 left"><a href="/category/list/?category_id=1">Биокамины</a></div>
-                <div class="col-md-4 col-sm-12 col-xs-12 middle"><a href="/category/list/?category_id=2">Печные камины и топки</a></div>
+                <div class="col-md-4 col-sm-12 col-xs-12 middle"><a href="/category/list/?all_ch=true&category_id=2">Печные камины и топки</a></div>
                 <div class="col-md-4 col-sm-12 col-xs-12 right"><a href="/category/list/?category_id=3">Аксессуары</a></div>
             </div>
             <div class="newsblock">

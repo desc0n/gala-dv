@@ -16,6 +16,9 @@ class Model_Notice extends Kohana_Model {
 		$limit = empty($rowLimit) ? '' : "limit $startLimit, $rowLimit";
 		$priceSql = empty(Arr::get($params, 'price', 0)) ? '' : ' and `n`.`price` <= :price ';
 		$priceCountSql = empty(Arr::get($params, 'price', 0)) ? '' : ' and `nt`.`price` <= :price ';
+		$categorySql = !empty(Arr::get($params, 'all_ch'))
+				? 'select `c2`.`id` from `category` `c1` inner join `category` `c2` on `c2`.`parent_id` = `c1`.`id` where `c1`.`parent_id` = :category_id'
+				: ' select `c`.`id` from `category` `c` where `c`.`parent_id` = :category_id ';
         $name = Arr::get($params, 'name');
         $nameSql = !empty($name)  ? " and `n`.`name` like '$name' " : '';
         $nameCountSql = !empty($name)  ? " and `nt`.`name` like '$name' " : '';
@@ -39,7 +42,7 @@ class Model_Notice extends Kohana_Model {
 			from `notice` `n`
 			where (
 			    `n`.`category` = :category_id
-			    or `n`.`category` in (select `c`.`id` from `category` `c` where `c`.`parent_id` = :category_id)
+			    or `n`.`category` in ($categorySql)
             )
 			and `n`.`status_id` = 1
 			$priceSql
@@ -65,6 +68,7 @@ class Model_Notice extends Kohana_Model {
 			->param(':price', Arr::get($params, 'price', 0))
 			->execute()
 			->as_array();
+
 		foreach ($res as $row) {
 			$noticeData[$i] = $row;
 			$noticeData[$i]['imgs'] = $this->getNoticeImg($row);
